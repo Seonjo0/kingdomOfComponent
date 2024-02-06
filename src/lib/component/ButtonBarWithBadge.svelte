@@ -29,8 +29,9 @@
         justify-content: center;
         align-items: center;
         background-color: sandybrown;
-        width: 80%;
+        width: 85%;
         font-size: 1.5rem;
+				border-radius: 5px;
     }
 
     .contentBar:hover {

@@ -1,9 +1,11 @@
-<script lang="ts">
-
+<script context="module" lang="ts">
 	import NavigationBar from '$lib/component/NavigationBar.svelte';
 	import { type DashBoardItemList, type NavbarItemList, type User, userAuth, userRole } from '../type/Type';
 	import Dashboard from '$lib/component/Dashboard.svelte';
+	import TableContainer from '$lib/component/TableContainer.svelte';
+</script>
 
+<script lang="ts">
 	const navbarItems: NavbarItemList = {
 		admin: ['home', 'patientList', 'schedule', 'dcmViewer', 'confirm', 'aiSeg', 'train'],
 		user: ['home', 'patientList', 'schedule', 'dcmViewer', 'confirm'],
@@ -23,18 +25,18 @@
 		]
 	};
 
-	// const user: User = {
-	// 	name: '이선주',
-	// 	photo: '/Pe.png',
-	// 	role: userRole.Nurse,
-	// 	auth: userAuth.admin
-	// };
+	let tableNumber: number = 0;
+
+	function onItemClick(boardNumber: number): void{
+		tableNumber = boardNumber;
+	}
 
 </script>
 
 <div style="display: flex">
-	<NavigationBar navBar={navbarItems.admin} />
+	<NavigationBar navBar={navbarItems.admin} onItemClick={onItemClick} />
 	<Dashboard navBarItem={dashBoardItemList} />
+	<TableContainer boardNum={tableNumber}/>
 </div>
 
 <style>

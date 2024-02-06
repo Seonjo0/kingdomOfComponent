@@ -6,11 +6,11 @@
 	export let navBarItem: DashBoardItemList;
 
 	const user: User = {
-		name : "이선주",
-		photo : "/Pe.png",
-		role : userRole.Nurse,
-		auth : userAuth.admin
-	}
+		name: '이선주',
+		photo: '/Pe.png',
+		role: userRole.Nurse,
+		auth: userAuth.admin
+	};
 
 </script>
 
@@ -28,25 +28,23 @@
 		{/each}
 	</div>
 
-	<div class="userInfo">
-		<UserInfo user={user}/>
+	<div class="userInfoContainer">
+		<UserInfo user={user} />
 	</div>
 </div>
 
 <style>
     .mainContainer {
         display: block;
-        width: 25%;
+        width: 18%;
         height: 100vh;
-        background-color: dimgrey;
+        background-color: #3f3ccf;
     }
 
     .logoContainer {
         display: flex;
         justify-content: center;
-        justify-items: center;
         align-items: center;
-        align-content: center;
         width: 100%;
         height: 10vh;
     }
@@ -55,8 +53,8 @@
         margin: 10px;
         border-radius: 50%;
         background-color: red;
-        width: 20%;
-        height: 55%;
+        width: 25%;
+        height: 75%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -67,7 +65,10 @@
         font-size: 1.5em;
     }
 
-		.badgeBarContainer {
-				height: 75vh;
-		}
+    .badgeBarContainer {
+        height: 82.7vh;
+    }
+
+    .userInfoContainer {
+    }
 </style>

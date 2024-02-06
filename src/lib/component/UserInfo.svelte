@@ -18,16 +18,20 @@
 		{userRole[user.role]}
 	</div>
 	<div class="userSetting">
-		{userAuth[user.auth]}
+		<img src="/icon/setting.png" alt="setting">
 	</div>
 </div>
 
 <style>
 	.mainContainer {
 			display: flex;
-			justify-content: space-around;
+			justify-content: space-between;
 			align-items: center;
-			background-color: hotpink;
+			background-color: #b5b4ff;
+	}
+
+	.userImg {
+			flex-grow: 0.5;
 	}
 
 	.userImg > img{
@@ -38,9 +42,30 @@
 	}
 
 	.userName {
-			font-size: 1.5em;
+      flex-grow: 0.5;
+			font-size: 1.8em;
+			color: black;
+			font-weight: bold;
+			padding-right: 50px;
+	}
+
+	.userRole {
+      flex-grow: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 1%;
+			height: 3vh;
+			border-radius: 20px;
+			background-color: #bd00ff;
 			color: white;
-			margin-left: -100px;
+			font-weight: bold;
+			font-size: 1.2em;
+	}
+
+	.userSetting {
+			flex-grow: 0.5;
+			text-align: center;
 	}
 
 </style>
